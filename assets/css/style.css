@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd900;
+    width: 100%;
+    height: 100%;
+}
+header img{
+    width: 10rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#sec1{
+    display: grid;
+}
+.geral{
+    background-color: #514988;
+}
+#titulo{
+    text-align: center;
+    color: #F3C61F;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 2.3rem;
+    line-height: 35px;
+}
+#dataEvento{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 15px;
+    line-height: 35px;
+}
+#conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 30px;
+    padding: 4px;
+}
+#countdown{
+    display: grid;
+    grid-auto-flow: column;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #514988;
+    justify-content: center; 
+    margin-top: 10px; 
+}
+.cd{
+    margin-left: 20px;
+}
+#aviso{
+    color: #e33881;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#corre{
+    color: #F3C61F;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 10px;
+
+}
+#card-ingresso{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    margin-bottom: 10px;
+}
+#botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 60%;
+    height: 55px;
+    border-radius: 10px;
+    border: none;
+    background-color:#514988;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+#botao:hover{
+    background-color: #ffd900;
+    transform: scale(0.9);
+    transition: .4s;
+    color: #514988;
+}
+footer{
+    background-color: #F3C61F;
+    text-align: center;
+    font-size: 0.8rem;
+    color: black;
+    margin-top: 40px;
+}
+#form-email{
+    border-radius: 10px;
+    background-color: #514988;
+    color:white;
+    height: 30px;
+    width: 60%;
+    border: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 10px;
+}
+#form-email::placeholder{
+    color: white;
+}
+#enviar{
+    border-radius: 10px;
+    width: 20%;
+    height: 30px;
+    border: none;
+    background-color: #514988;
+    color: white;
+}
+#enviar:hover{
+    background-color: #ffd900;
+    transform: scale(0.9);
+    transition: .4s;
+}
+@media screen and (min-width: 800px){
+    header{
+        display: flex;
+        justify-content: flex-start;
+    }
+    header img{
+        margin-left: 10px;
+    }
+    #sec1{
+        display: grid;
+        grid-auto-flow: column;
+    }
+    #video{
+        width: 100%;
+        padding: 10px;
+    }
+    .geral{
+        height: auto;
+        width: 100%;
+    }
+    #titulo{
+        font-size: 1.5rem;
+    }
+    #dataEvento{
+        font-size: 1rem;
+    }
+    #conteudo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.8rem;
+        line-height: 20px;
+        padding: 4px;
+        margin-top: 10px;
+    }
+    .card{
+        width: 200px;
+    }
+    #texto{
+        display: flex;
+        justify-content: flex-start;
+    }
+    #botao{
+        margin-top: 40px;
+        width: 300px;
+
+    }
+    #form-email{
+        width: 500px;
+    }
+    #enviar{
+        width: 285px;
+    }
+}
+@media screen and (min-width: 1000px){
+    #card-responsive{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    #conteudo{
+        font-size: 1.1rem;
+    }
+    .card{
+        width: 150px;
+    }
+    #botao{
+        margin-top: 50px;
+        width: 330px;
+        height: 80px;
+        margin-left: 50px;
+    }
+
+}
+@media screen and (min-width: 1200px){
+    #conteudo{
+        font-size: 1.8rem;
+        font-weight: 200;
+        line-height: 40px;
+    }
+    .cd{
+        font-size: 2.6rem;
+    }
+    #botao{
+        margin-right: auto;
+        margin-top: 90px;
+    }
+    .card{
+       width: 250px; 
+    }
+    #texto{
+        font-size: 1.8rem;
+    }
+}
+
+
+
+/* #bloco1{
+    background-color: #514988;
+    color: #ffffff;
+    text-align: center;
+    width: 400px;
+}
+
+#texto-inicial{ 
+    display: grid;
+    grid-auto-flow: column;
+    background: #514988;
+    font-size: 15px;
+    width: 400px;
+    
+}
+#h1 {
+    color: #F3C61F;
+    font-size: 25px;
+}
+#h6{
+    font-size: 17px;
+}
+#timervideo{
+    display: grid;  
+}
+.countdown{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: #514988;
+}
+
+#video{
+    padding: 0.5vw;
+}
+.pmctt{
+  margin-left: 30px;  
+  font-size: 15px;
+  color: #E33881;
+  text-align: left;
+  width: 500px;
+  
+}
+#ingressos{
+    display: grid;
+    width: 650px; 
+    margin-left: 20px;   
+}
+
+#atgsc{
+    color: #F3C61F;
+    font-size:15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#botao{
+    position: absolute;
+    width:350px;
+    height: 80px;
+    margin-left: 80px;
+    border-radius: 20px;
+    margin-top: 10px;
+    background: #514988;
+    color: #FFFFFF;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+#botao:hover{
+    background: #514988;
+    cursor: pointer;
+    color: #F3C61F;
+}
+/* telas menores */
+/* @media only screen and ( max-width: 900px) {
+   body{
+    grid-auto-flow: row;
+    width: 400px;
+    margin:1vw;
+        
+   }
+   #img{
+    margin-left: 100px;
+   }
+   
+   #imglogo{
+    align-items: center;
+    height: 20vw;
+   }
+    header{
+    justify-content: space-between;
+    grid-auto-flow: column;
+    
+   }
+ #timervideo{
+    
+    width: 50px;   
+ }
+ .geral{
+    justify-content: space-between;
+    grid-auto-flow: row;
+    width: 600px;
+ } 
+ .countdown{
+   width: 380px;
+   padding: 10PX;
+   text-align: justify;
+   
+    
+ }
+ #video{
+    width: 380px;
+ }
+ #atgsc{
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 15px;
+    margin: -17PX;
+    
+ }
+ #ingressos{
+    
+    justify-content: space-between;
+    margin: -15px;
+   
+ }
+
+    #botao{
+        display: grid;
+        align-items: center;
+        text-align: center;
+        margin: 30px;
+    
+ }
+ #pmctt{
+   margin-left: -15px;   
+    font-size: 15px;
+
+ }
+} */
+
