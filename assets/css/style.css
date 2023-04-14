@@ -89,7 +89,7 @@ header img{
     justify-content: center;
     flex-wrap: wrap;
 }
-.card{
+.card-highlight{
     margin-bottom: 10px;
 }
 #botao{
@@ -149,6 +149,13 @@ footer{
     transform: scale(0.9);
     transition: .4s;
 }
+.card-highlight{
+    transform: scale(1.1);
+    transition: .4s;
+}
+.card-selector{
+    border:5px solid green;
+}
 @media screen and (min-width: 800px){
     header{
         display: flex;
@@ -202,6 +209,10 @@ footer{
     }
     #enviar{
         width: 285px;
+    }
+    .card-off{
+        filter: grayscale(1);
+        transition: .1s;
     }
 }
 @media screen and (min-width: 1000px){
