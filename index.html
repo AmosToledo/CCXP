@@ -40,18 +40,18 @@
                 <h1 class="cd" id="minuto"></h1>
                 <h1 class="cd" id="segundo"></h1>
             </div>
-       
 
-        <div>
-            <p id="aviso">PARA A MAIOR CCXP DE TODOS OS TEMPOS</p>
-        </div>
 
-        <div>
-            <video controls-none loop autoplay muted id="video" Width="100%" src="assets/video/Arlequina.mp4"
-                type="video/mp4">
-            </video>
+            <div>
+                <p id="aviso">PARA A MAIOR CCXP DE TODOS OS TEMPOS</p>
+            </div>
+
+            <div>
+                <video controls-none loop autoplay muted id="video" Width="100%" src="assets/video/Arlequina.mp4"
+                    type="video/mp4">
+                </video>
+            </div>
         </div>
-    </div>
 
     </section>
     <section id="compre">
@@ -60,18 +60,29 @@
                 <p id="texto"><strong>AINDA DÁ TEMPO DE GARANTIR O SEU, MAS CORRE!</strong></p>
             </div>
             <div id="card-responsive">
-            <div id="card-ingresso">
-                <img src="assets/img/quinta.svg" class="card" id="quinta" alt="ingresso-quinta">
-                <img src="assets/img/sexta.svg" class="card" id="sexta" alt="ingresso-sexta">
-                <img src="assets/img/esgotado.svg" class="card" id="sabado" alt="ingresso-esgtado">
-                <img src="assets/img/domingo.svg" class="card" id="domingo" alt="ingresso-domingo">
-            </div>
-            <div>
-                <button id="botao"><b>GARANTA O SEU!</b></button>
+                <div id="card-ingresso">
+                    <img src="assets/img/quinta.svg" class="card" id="quinta" alt="ingresso-quinta"
+                        onmouseover="highlightCards('#quinta')" onclick="selectCard('#quinta')"
+                        onmouseout="highlightCards('#quinta')">
+
+                    <img src="assets/img/sexta.svg" class="card" id="sexta" alt="ingresso-sexta"
+                        onmouseover="highlightCards('#sexta')" onclick="selectCard('#sexta')"
+                        onmouseout="highlightCards('#sexta')">
+
+                    <img src="assets/img/esgotado.svg" class="card" id="sabado" alt="ingresso-esgtado"
+                        onmouseover="highlightCards('#sabado')" onclick="selectCard('#sabado')"
+                        onmouseout="highlightCards('#sabado')">
+
+                    <img src="assets/img/domingo.svg" class="card" id="domingo" alt="ingresso-domingo"
+                        onmouseover="highlightCards('#domingo')" onclick="selectCard('#domingo')"
+                        onmouseout="highlightCards('#domingo')">
+                </div>
+                <div>
+                    <button id="botao" onclick="showSelectedCards()"><b>GARANTA O SEU!</b></button>
+                </div>
             </div>
         </div>
-        </div>
-    
+
     </section>
     <footer>
         <form action="">

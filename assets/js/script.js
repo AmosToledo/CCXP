@@ -29,3 +29,70 @@ function formatoTempo ( tempo ){
 countDown();
 setInterval(countDown, 1000)
 
+//change with Keyboard
+
+function highlightCards(selector){
+    
+
+let element = document.querySelector(selector);
+element.classList.toggle("card-highlight");
+
+}
+// change with Keyboard
+
+function addKeyboardEventListerners(){
+    document.addEventListener('keydown', (event) =>{
+
+        
+        let ingresso1 = document.querySelector('#quinta')
+        let ingresso2 = document.querySelector('#sexta')
+        let ingresso3 = document.querySelector('#sabado')
+        let ingresso4 = document.querySelector('#domingo')
+
+        let code = event.code;
+
+        if ( code == "Digit1"){
+            ingresso1.classList.toggle("card-highlight")
+            ingresso2.classList.remove("card-highlight")
+            ingresso3.classList.remove("card-highlight")
+            ingresso4.classList.remove("card-highlight")
+            ingresso2.classList.toggle("card-off")
+            ingresso3.classList.toggle("card-off")
+            ingresso4.classList.toggle("card-off")
+        }
+        if ( code == "Digit2"){
+            ingresso1.classList.remove("card-highlight")
+            ingresso2.classList.toggle("card-highlight")
+            ingresso3.classList.remove("card-highlight")
+            ingresso4.classList.remove("card-highlight")
+          
+        }
+        if ( code == "Digit3"){
+            ingresso1.classList.remove("card-highlight")
+            ingresso2.classList.remove("card-highlight")
+            ingresso3.classList.toggle("card-highlight")
+            ingresso4.classList.remove("card-highlight")
+           
+        }
+        if ( code == "Digit4"){
+            ingresso1.classList.remove("card-highlight")
+            ingresso2.classList.remove("card-highlight")
+            ingresso3.classList.remove("card-highlight")
+            ingresso4.classList.toggle("card-highlight")
+            
+        }       
+} ,false);
+}
+
+
+const ingressos = []
+
+function selectCard(selector){
+    let element = document.querySelector(selector);
+    element.classList.toggle('card-selector');
+    if(ingressos.includes(selector)) ingressos.pop(selector);
+    else ingressos.push(selector);
+}
+
+
+addKeyboardEventListerners()
